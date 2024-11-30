@@ -1,6 +1,16 @@
-const num1; 
-const num2;
-const operator; 
+const screenInput = document.querySelector(".screen").textContent.split(" ");
+console.log(screenInput)
+
+const num1 = parseInt(screenInput[0]);
+console.log(typeof(num1));
+
+const operator = screenInput[1];
+console.log(operator);
+
+const num2 = parseInt(screenInput[2]);
+console.log(num2);
+
+
 
 function operate(num1, num2, operator) {
     if (operator === "+") {
@@ -38,3 +48,10 @@ function divide(num1, num2) {
 }
 
 console.log(divide(9, 3));
+
+
+// get buttons with document query selector
+const buttons = document.querySelector(".buttons");
+
+// add event listener to all buttons
+buttons.addEventListener("click", screenOutput)
