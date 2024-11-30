@@ -1,18 +1,8 @@
-const screenInput = document.querySelector(".screen").textContent.split(" ");
-console.log(screenInput)
-
-const num1 = parseInt(screenInput[0]);
-console.log(typeof(num1));
-
-const operator = screenInput[1];
-console.log(operator);
-
-const num2 = parseInt(screenInput[2]);
-console.log(num2);
-
-
-
-function operate(num1, num2, operator) {
+function operate() {
+    const screenInput = document.querySelector(".screen").textContent.split(" ");
+    const num1 = parseInt(screenInput[0]);
+    const operator = screenInput[1];
+    const num2 = parseInt(screenInput[2]);
     
     if (operator === "+") {
         return add(num1, num2);
@@ -30,26 +20,17 @@ function add(num1, num2) {
     return num1 + num2;
 }
 
-console.log(add(3, 4));
-
 function subtract(num1, num2) {
     return num1 - num2;
 }
-
-console.log(subtract(9, 6));
 
 function multiply(num1, num2) {
     return num1 * num2;
 }
 
-console.log(multiply(5, 5));
-
 function divide(num1, num2) {
     return num1 / num2;
 }
-
-console.log(divide(9, 3));
-
 
 // get buttons with document query selector
 const buttons = document.querySelector(".buttons");
@@ -106,6 +87,6 @@ function screenOutput(btn) {
         document.querySelector(".screen").textContent = "";
     } else if (btn.target.matches(".enter")) {
         console.log("enter");
-
+        document.querySelector(".screen").textContent = operate();
     }
 }
