@@ -6,10 +6,15 @@
 }
 
 .screen {
+    box-sizing: border-box;
     height: 100px;
     width: 250px;
     background-color: gray;
     margin: 20px auto;
+    text-align: end;
+    font-weight: bolder;
+    font-size: 50px;
+    padding: 20px 10px;
 }
 
 .buttons {

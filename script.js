@@ -1,3 +1,20 @@
+const num1; 
+const num2;
+const operator; 
+
+function operate(num1, num2, operator) {
+    if (operator === "+") {
+        return add(num1, num2);
+    } else if (operator === "-") {
+        return subtract(num1, num2);
+    } else if (operator === "*") {
+        return multiply(num1, num2);
+    } else {
+        return divide(num1, num2);
+    }
+}
+
+
 function add(num1, num2) {
     return num1 + num2;
 }
